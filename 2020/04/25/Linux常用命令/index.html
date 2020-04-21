@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>16 个超级实用的 Java 工具类 | Qiu Xiaojia的博客</title>
+  <title>Linux常用命令 | Qiu Xiaojia的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一. org.apache.commons.io.IOUtils closeQuietly：关闭一个IO流、socket、或者selector且不抛出异常，通常放在finally块 toString：转换IO流、 Uri、 byte[]为String copy：IO流数据复制，从输入流写到输出流中，最大支持2GB toByteArray：从输入流、URI获取byte[] write：把字节. 字符">
+  <meta name="description" content="一、目录操作命令➤ls命令名称：ls命令英文原意：list命令所在路径：&#x2F;bin&#x2F;ls执行权限：所有用户功能描述：显示目录文件ls              (显示当前目录下文件)ls 目录名        (显示指定目录下文件)ls -l           (长格式显示目录文件)ls -l 文件名     (长格式显示指定文件)ls -a           (显示所有文件(包含隐藏文件))">
 <meta property="og:type" content="article">
-<meta property="og:title" content="16 个超级实用的 Java 工具类">
-<meta property="og:url" content="http://yoursite.com/2020/04/12/16%20%E4%B8%AA%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84%20Java%20%E5%B7%A5%E5%85%B7%E7%B1%BB/index.html">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2020/04/25/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Qiu Xiaojia的博客">
-<meta property="og:description" content="一. org.apache.commons.io.IOUtils closeQuietly：关闭一个IO流、socket、或者selector且不抛出异常，通常放在finally块 toString：转换IO流、 Uri、 byte[]为String copy：IO流数据复制，从输入流写到输出流中，最大支持2GB toByteArray：从输入流、URI获取byte[] write：把字节. 字符">
+<meta property="og:description" content="一、目录操作命令➤ls命令名称：ls命令英文原意：list命令所在路径：&#x2F;bin&#x2F;ls执行权限：所有用户功能描述：显示目录文件ls              (显示当前目录下文件)ls 目录名        (显示指定目录下文件)ls -l           (长格式显示目录文件)ls -l 文件名     (长格式显示指定文件)ls -a           (显示所有文件(包含隐藏文件))">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-12T02:28:54.000Z">
-<meta property="article:modified_time" content="2020-04-12T02:51:22.052Z">
+<meta property="article:published_time" content="2020-04-25T02:36:11.000Z">
+<meta property="article:modified_time" content="2020-04-21T03:06:35.165Z">
 <meta property="article:author" content="Qiu Xiaojia">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Qiu Xiaojia的博客" type="application/atom+xml">
@@ -151,182 +151,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-16 个超级实用的 Java 工具类" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux常用命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      16 个超级实用的 Java 工具类
+      Linux常用命令
     </h1>
   
 
         
-        <a href="/2020/04/12/16%20%E4%B8%AA%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84%20Java%20%E5%B7%A5%E5%85%B7%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-04-12T02:28:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
+        <a href="/2020/04/25/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-04-25T02:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一-org-apache-commons-io-IOUtils"><a href="#一-org-apache-commons-io-IOUtils" class="headerlink" title="一. org.apache.commons.io.IOUtils"></a>一. org.apache.commons.io.IOUtils</h3><ul>
-<li>closeQuietly：关闭一个IO流、socket、或者selector且不抛出异常，通常放在finally块</li>
-<li>toString：转换IO流、 Uri、 byte[]为String</li>
-<li>copy：IO流数据复制，从输入流写到输出流中，最大支持2GB</li>
-<li>toByteArray：从输入流、URI获取byte[]</li>
-<li>write：把字节. 字符等写入输出流</li>
-<li>toInputStream：把字符转换为输入流</li>
-<li>readLines：从输入流中读取多行数据，返回List<String></li>
-<li>copyLarge：同copy，支持2GB以上数据的复制</li>
-<li>lineIterator：从输入流返回一个迭代器，根据参数要求读取的数据量，全部读取，如果数据不够，则失败</li>
-</ul>
-<a id="more"></a> 
-
-<h3 id="二-org-apache-commons-io-FileUtils"><a href="#二-org-apache-commons-io-FileUtils" class="headerlink" title="二. org.apache.commons.io.FileUtils"></a>二. org.apache.commons.io.FileUtils</h3><ul>
-<li>deleteDirectory：删除文件夹</li>
-<li>readFileToString：以字符形式读取文件内容</li>
-<li>deleteQueitly：删除文件或文件夹且不会抛出异常</li>
-<li>copyFile：复制文件</li>
-<li>writeStringToFile：把字符写到目标文件，如果文件不存在，则创建</li>
-<li>forceMkdir：强制创建文件夹，如果该文件夹父级目录不存在，则创建父级</li>
-<li>write：把字符写到指定文件中</li>
-<li>listFiles：列举某个目录下的文件(根据过滤器)</li>
-<li>copyDirectory：复制文件夹</li>
-<li>forceDelete：强制删除文件</li>
-</ul>
-<h3 id="三-org-apache-commons-lang-StringUtils"><a href="#三-org-apache-commons-lang-StringUtils" class="headerlink" title="三. org.apache.commons.lang.StringUtils"></a>三. org.apache.commons.lang.StringUtils</h3><ul>
-<li>isBlank：字符串是否为空 (trim后判断)</li>
-<li>isEmpty：字符串是否为空 (不trim并判断)</li>
-<li>equals：字符串是否相等</li>
-<li>join：合并数组为单一字符串，可传分隔符</li>
-<li>split：分割字符串</li>
-<li>EMPTY：返回空字符串</li>
-<li>trimToNull：trim后为空字符串则转换为null</li>
-<li>replace：替换字符串</li>
-</ul>
-<h3 id="四-org-apache-http-util-EntityUtils"><a href="#四-org-apache-http-util-EntityUtils" class="headerlink" title="四. org.apache.http.util.EntityUtils"></a>四. org.apache.http.util.EntityUtils</h3><ul>
-<li>toString：把Entity转换为字符串</li>
-<li>consume：确保Entity中的内容全部被消费。可以看到源码里又一次消费了Entity的内容，假如用户没有消费，那调用Entity时候将会把它消费掉</li>
-<li>toByteArray：把Entity转换为字节流</li>
-<li>consumeQuietly：和consume一样，但不抛异常</li>
-<li>getContentCharset：获取内容的编码</li>
-</ul>
-<h3 id="五-org-apache-commons-lang3-StringUtils"><a href="#五-org-apache-commons-lang3-StringUtils" class="headerlink" title="五. org.apache.commons.lang3.StringUtils"></a>五. org.apache.commons.lang3.StringUtils</h3><ul>
-<li>isBlank：字符串是否为空 (trim后判断)</li>
-<li>isEmpty：字符串是否为空 (不trim并判断)</li>
-<li>equals：字符串是否相等</li>
-<li>join：合并数组为单一字符串，可传分隔符</li>
-<li>split：分割字符串</li>
-<li>EMPTY：返回空字符串</li>
-<li>replace：替换字符串</li>
-<li>capitalize：首字符大写</li>
-</ul>
-<h3 id="六-org-apache-commons-io-FilenameUtils"><a href="#六-org-apache-commons-io-FilenameUtils" class="headerlink" title="六. org.apache.commons.io.FilenameUtils"></a>六. org.apache.commons.io.FilenameUtils</h3><ul>
-<li>getExtension：返回文件后缀名</li>
-<li>getBaseName：返回文件名，不包含后缀名</li>
-<li>getName：返回文件全名</li>
-<li>concat：按命令行风格组合文件路径(详见方法注释)</li>
-<li>removeExtension：删除后缀名</li>
-<li>normalize：使路径正常化</li>
-<li>wildcardMatch：匹配通配符</li>
-<li>seperatorToUnix：路径分隔符改成unix系统格式的，即/</li>
-<li>getFullPath：获取文件路径，不包括文件名</li>
-<li>isExtension：检查文件后缀名是不是传入参数(List<String>)中的一个</li>
-</ul>
-<h3 id="七-org-springframework-util-StringUtils"><a href="#七-org-springframework-util-StringUtils" class="headerlink" title="七. org.springframework.util.StringUtils"></a>七. org.springframework.util.StringUtils</h3><ul>
-<li>hasText：检查字符串中是否包含文本</li>
-<li>hasLength：检测字符串是否长度大于0</li>
-<li>isEmpty：检测字符串是否为空（若传入为对象，则判断对象是否为null）</li>
-<li>commaDelimitedStringToArray：逗号分隔的String转换为数组</li>
-<li>collectionToDelimitedString：把集合转为CSV格式字符串</li>
-<li>replace 替换字符串</li>
-<li>delimitedListToStringArray：相当于split</li>
-<li>uncapitalize：首字母小写</li>
-<li>collectionToDelimitedCommaString：把集合转为CSV格式字符串</li>
-<li>tokenizeToStringArray：和split基本一样，但能自动去掉空白的单词</li>
-</ul>
-<h3 id="八-org-apache-commons-lang-ArrayUtils"><a href="#八-org-apache-commons-lang-ArrayUtils" class="headerlink" title="八. org.apache.commons.lang.ArrayUtils"></a>八. org.apache.commons.lang.ArrayUtils</h3><ul>
-<li>contains：是否包含某字符串</li>
-<li>addAll：添加整个数组</li>
-<li>clone：克隆一个数组</li>
-<li>isEmpty：是否空数组</li>
-<li>add：向数组添加元素</li>
-<li>subarray：截取数组</li>
-<li>indexOf：查找某个元素的下标</li>
-<li>isEquals：比较数组是否相等</li>
-<li>toObject：基础类型数据数组转换为对应的Object数组</li>
-</ul>
-<h3 id="九-org-apache-commons-lang-StringEscapeUtils"><a href="#九-org-apache-commons-lang-StringEscapeUtils" class="headerlink" title="九. org.apache.commons.lang.StringEscapeUtils"></a>九. org.apache.commons.lang.StringEscapeUtils</h3><ul>
-<li><p>参考十五：</p>
-<p>org.apache.commons.lang3.StringEscapeUtils</p>
-</li>
-</ul>
-<h3 id="十-org-apache-http-client-utils-URLEncodedUtils"><a href="#十-org-apache-http-client-utils-URLEncodedUtils" class="headerlink" title="十. org.apache.http.client.utils.URLEncodedUtils"></a>十. org.apache.http.client.utils.URLEncodedUtils</h3><ul>
-<li>format：格式化参数，返回一个HTTP POST或者HTTP PUT可用application/x-www-form-urlencoded字符串</li>
-<li>parse：把String或者URI等转换为List<NameValuePair>``</li>
-</ul>
-<h3 id="十一-org-apache-commons-codec-digest-DigestUtils"><a href="#十一-org-apache-commons-codec-digest-DigestUtils" class="headerlink" title="十一. org.apache.commons.codec.digest.DigestUtils"></a>十一. org.apache.commons.codec.digest.DigestUtils</h3><ul>
-<li>md5Hex：MD5加密，返回32位字符串</li>
-<li>sha1Hex：SHA-1加密</li>
-<li>sha256Hex：SHA-256加密</li>
-<li>sha512Hex：SHA-512加密</li>
-<li>md5：MD5加密，返回16位字符串</li>
-</ul>
-<h3 id="十二-org-apache-commons-collections-CollectionUtils"><a href="#十二-org-apache-commons-collections-CollectionUtils" class="headerlink" title="十二. org.apache.commons.collections.CollectionUtils"></a>十二. org.apache.commons.collections.CollectionUtils</h3><ul>
-<li>isEmpty：是否为空</li>
-<li>select：根据条件筛选集合元素</li>
-<li>transform：根据指定方法处理集合元素，类似List的map()</li>
-<li>filter：过滤元素，雷瑟List的filter()</li>
-<li>find：基本和select一样</li>
-<li>collect：和transform 差不多一样，但是返回新数组</li>
-<li>forAllDo：调用每个元素的指定方法</li>
-<li>isEqualCollection：判断两个集合是否一致</li>
-</ul>
-<h3 id="十三-org-apache-commons-lang3-ArrayUtils"><a href="#十三-org-apache-commons-lang3-ArrayUtils" class="headerlink" title="十三. org.apache.commons.lang3.ArrayUtils"></a>十三. org.apache.commons.lang3.ArrayUtils</h3><ul>
-<li>contains：是否包含某个字符串</li>
-<li>addAll：添加整个数组</li>
-<li>clone：克隆一个数组</li>
-<li>isEmpty：是否空数组</li>
-<li>add：向数组添加元素</li>
-<li>subarray：截取数组</li>
-<li>indexOf：查找某个元素的下标</li>
-<li>isEquals：比较数组是否相等</li>
-<li>toObject：基础类型数据数组转换为对应的Object数组</li>
-</ul>
-<h3 id="十四-org-apache-commons-beanutils-PropertyUtils"><a href="#十四-org-apache-commons-beanutils-PropertyUtils" class="headerlink" title="十四. org.apache.commons.beanutils.PropertyUtils"></a>十四. org.apache.commons.beanutils.PropertyUtils</h3><ul>
-<li>getProperty：获取对象属性值</li>
-<li>setProperty：设置对象属性值</li>
-<li>getPropertyDiscriptor：获取属性描述器</li>
-<li>isReadable：检查属性是否可访问</li>
-<li>copyProperties：复制属性值，从一个对象到另一个对象</li>
-<li>getPropertyDiscriptors：获取所有属性描述器</li>
-<li>isWriteable：检查属性是否可写</li>
-<li>getPropertyType：获取对象属性类型</li>
-</ul>
-<h3 id="十五-org-apache-commons-lang3-StringEscapeUtils"><a href="#十五-org-apache-commons-lang3-StringEscapeUtils" class="headerlink" title="十五. org.apache.commons.lang3.StringEscapeUtils"></a>十五. org.apache.commons.lang3.StringEscapeUtils</h3><ul>
-<li>unescapeHtml4：转义html</li>
-<li>escapeHtml4：反转义html</li>
-<li>escapeXml：转义xml</li>
-<li>unescapeXml：反转义xml</li>
-<li>escapeJava：转义unicode编码</li>
-<li>escapeEcmaScript：转义EcmaScript字符</li>
-<li>unescapeJava：反转义unicode编码</li>
-<li>escapeJson：转义json字符</li>
-<li>escapeXml10：转义Xml10</li>
-</ul>
-<p>这个现在已经废弃了，建议使用commons-text包里面的方法。</p>
-<h3 id="十六-org-apache-commons-beanutils-BeanUtils"><a href="#十六-org-apache-commons-beanutils-BeanUtils" class="headerlink" title="十六. org.apache.commons.beanutils.BeanUtils"></a>十六. org.apache.commons.beanutils.BeanUtils</h3><ul>
-<li>copyPeoperties：复制属性值，从一个对象到另一个对象</li>
-<li>getProperty：获取对象属性值</li>
-<li>setProperty：设置对象属性值</li>
-<li>populate：根据Map给属性复制</li>
-<li>copyPeoperty：复制单个值，从一个对象到另一个对象</li>
-<li>cloneBean：克隆bean实例</li>
-</ul>
-<p>现在你只要了解了以上16种最流行的工具类方法，你就不必要再自己写工具类了，不必重复造轮子。大部分工具类方法通过其名字就能明白其用途，如果不清楚的，可以看下别人是怎么用的，或者去网上查询其用法。</p>
-<p>另外，工具类，根据阿里开发手册，包名如果要使用util不能带s，工具类命名为 XxxUtils</p>
+        <h3 id="一、目录操作命令"><a href="#一、目录操作命令" class="headerlink" title="一、目录操作命令"></a>一、目录操作命令</h3><p><strong>➤ls</strong><br>命令名称：ls<br>命令英文原意：list<br>命令所在路径：/bin/ls<br>执行权限：所有用户<br>功能描述：显示目录文件<br>ls              (显示当前目录下文件)<br>ls 目录名        (显示指定目录下文件)<br>ls -l           (长格式显示目录文件)<br>ls -l 文件名     (长格式显示指定文件)<br>ls -a           (显示所有文件(包含隐藏文件))<a id="more"></a><br>ls -al          (长格式显示当前目录下所有文件)<br>ls -h           (文件大小显示为常见大小单位 B KB MB …)<br>ls -d           (显示目录本身，而不是里面的子文件)</p>
+<p><strong>➤长格式显示项</strong><br>-rw——-    1   root    root    1190    08-10 23:37     anaconda-ks.cfg<br>     ①       ②    ③      ④       ⑤          ⑥                ⑦<br>第①项：权限位<br>第②项：引用计数<br>第③项：属主（所有者）<br>第④项：属组<br>第⑤项：大小<br>第⑥项：最后一次修改时间<br>第⑦项：文件名</p>
+<p><strong>➤cd</strong><br>命令名称：cd<br>命令英文原意：change directory<br>命令所在路径：shell内置命令<br>执行权限：所有用户<br>功能描述：切换所在目录<br>cd /usr/local/src   切换到指定路径(使用绝对路径方式)<br>cd ~                进入当前用户的家目录<br>cd -                进入上次目录<br>cd ..               进入上一级目录<br>cd .                进入当前目录<br>绝对路径：cd ../usr/local 参照当前所在目录，进行查找。一定要先确定当前所在目录。 相对路径：cd /usr/local 从根目录开始指定，一级一级递归查找。在任何目录下，都能进入指定位置。</p>
+<p><strong>➤pwd</strong><br>命令名称：pwd<br>命令英文原意：print working directory<br>命令所在路径：/bin/pwd<br>执行权限：所有用户<br>功能描述：显示当前所在目录(当前工作目录)</p>
+<h3 id="二、Linux-常见目录"><a href="#二、Linux-常见目录" class="headerlink" title="二、Linux 常见目录"></a>二、Linux 常见目录</h3><p>/                 根目录<br>/bin              命令保存目录（普通用户就可以读取的命令）<br>/boot             启动目录，启动相关文件<br>/dev              设备文件保存目录<br>/etc              配置文件保存目录<br>/home             普通用户的家目录<br>/lib              系统库保存目录<br>/mnt              系统挂载目录<br>/media            挂载目录<br>/root             超级用户的家目录<br>/tmp              临时目录<br>/sbin             命令保存目录（超级用户才能使用的目录）<br>/proc             直接写入内存的<br>/sys              将内核的一些信息映射，可供应用程序所用<br>/usr              系统软件资源目录<br>/usr/bin/         系统命令（普通用户）<br>/usr/sbin/        系统命令（超级用户）<br>/var              系统相关文档内容<br>/var/log/         系统日志位置<br>/var/spool/mail/  系统默认邮箱位置<br>/var/lib/         默认安装的库文件目录</p>
+<p><strong>➤mkdir</strong><br>命令名称：mkdir<br>命令英文原意：make directories<br>命令所在路径：/bin/mkdir<br>执行权限：所有用户<br>功能描述：建立目录<br>mkdir test                   创建名为test的目录<br>mkdir -p test1/test2/test3   递归创建</p>
+<p><strong>➤rmdir</strong><br>命令名称：rmdir<br>命令英文原意：remove empty directories<br>命令所在路径：/bin/rmdir<br>执行权限：所有用户<br>功能描述：删除目录  (只能删除空目录)</p>
+<h3 id="三、文件操作命令"><a href="#三、文件操作命令" class="headerlink" title="三、文件操作命令"></a>三、文件操作命令</h3><p><strong>➤touch</strong><br>命令名称：touch<br>命令所在路径：/bin/touch<br>执行权限：所有用户<br>功能描述：创建空文件 或 修改文件时间<br>touch test.py    创建空文件，如果文件存在，则修改文件创建时间</p>
+<p><strong>➤rm</strong><br>命令名称：rm<br>命令英文原意：remove<br>命令所在路径：/bin/rm<br>执行权限：所有用户<br>功能描述：删除<br>rm 文件名 删除文件<br>rm -r 目录名 递归删除文件和目录<br>rm -f 文件名 强制删除<br>rm -rf 目录名 强制删除目录和文件</p>
+<p><strong>➤cat</strong><br>命令名称：cat<br>命令所在路径：/bin/cat<br>执行权限：所有用户<br>功能描述：查看文件内容，从头到尾的内容。<br>cat 文件名      查看文件内容内容<br>cat -n 文件名   查看文件内容，并列出行号</p>
+<p><strong>➤more</strong><br>命令名称：more<br>命令所在路径：/bin/more<br>执行权限：所有用户<br>功能描述：分屏显示文件内容<br>more 文件名    分屏显示文件内容<br>向上翻页  空格键<br>向下翻页  b键<br>退出查看  q键</p>
+<p><strong>➤head</strong><br>命令名称：head<br>命令所在路径：/usr/bin/head<br>执行权限：所有用户<br>功能描述：显示文件头<br>head 文件名           显示文件头几行(默认显示10行)<br>head -n 20 文件名     显示文件前20行<br>head -n -20 文件名    显示文件最后20行<br>ctrl + c             强制终止查看模式<br>ctrl + l             清屏</p>
+<p><strong>➤ln</strong><br>命令名称：ln<br>命令英文原意：link<br>命令所在路径：/bin/ln<br>执行权限：所有用户<br>功能描述：链接文件<br>等同于Windows中的快捷方式<br>新建的链接，占用不同的硬盘位置<br>修改一个文件，两边都会改变<br>删除源文件，软连接文件打不开<br>ln -s 源文件 目标文件 创建链接文件(文件名都必须写绝对路径)</p>
+<h3 id="四、文件和目录都能操作的命令"><a href="#四、文件和目录都能操作的命令" class="headerlink" title="四、文件和目录都能操作的命令"></a>四、文件和目录都能操作的命令</h3><p><strong>➤rm</strong><br>删除文件或目录</p>
+<p><strong>➤cp</strong><br>命令名称：cp<br>命令英文原意：copy<br>命令所在路径：/bin/cp<br>执行权限：所有用户<br>功能描述：复制文件或目录<br>cp 源文件 目标位置             (复制)<br>    或<br>cp 源文件 目标位置/目标名称      (复制并改名)<br>cp -r       复制目录<br>cp -p       连带文件属性一起复制<br>cp -d       若源文件是链接文件，则复制链接属性<br>cp -a       相当于 cp -pdr<br><strong>➤mv</strong><br>命令名称：mv<br>命令英文原意：move<br>命令所在路径：/bin/mv<br>执行权限：所有用户</p>
+<p><strong>➤mv 源文件 目标位置</strong><br>mv /root/test /tmp/           将/root/下的test文件移动到/tmp/目录下<br>mv /root/test /root/newtest   将/root/下的test文件改名为newtest</p>
+<h3 id="五、权限管理"><a href="#五、权限管理" class="headerlink" title="五、权限管理"></a>五、权限管理</h3><p><strong>➤权限位</strong></p>
+<p>-rw-r–r–. 1 root root 44736 7月  18 00:38 install.log</p>
+<p><strong>➤权限位是十位</strong></p>
+<pre><code>第一位：代表文件类型
+-   普通文件
+d   目录文件
+l   链接文件
+其他九位：代表各用户的权限
+(前三位=属主权限u  中间三位=属组权限g  其他人权限o)
+r   读   4
+w   写   2
+x   执行  1</code></pre><p><strong>➤权限意义</strong></p>
+<p>✦权限对文件的含义：<br>    r：读取文件内容 如：cat、more、head、tail<br>    w：编辑、新增、修改文件内容 如：vi、echo 但是不包含删除文件<br>    x：可执行  /tmp/11/22/abc   ———    </p>
+<p>✦权限对目录的含义：<br>    r：可以查询目录下文件名 如：ls<br>    w：具有修改目录结构的权限 如：touch、rm、mv、cp<br>    x：可以进入目录 如：cd</p>
+<p><strong>➤chmod</strong><br>命令名称：chmod<br>命令英文原意：change the permissions mode of a file<br>命令所在路径：/bin/chmod<br>执行权限：所有用户<br>功能描述：修改权限<br>chmod u+x aa      aa文件的属主加上执行权限<br>chmod u-x aa      aa文件的属主减去执行权限<br>chmod g+w,o+w aa  aa文件的属组和其他人加上写权限<br>chmod u=rwx aa    aa文件的用户权限改为所有权限(读+写+执行)<br>另一种表现方式：<br>chmod 755 aa      aa文件的属主权限是rwx，属组和其他人是rx<br>chmod 644 aa      aa文件的属主权限是rw，属组和其他人是r</p>
+<p><strong>➤属主和属组命令chown</strong><br>命令名称：chown<br>命令英文原意：change file ownership<br>命令所在路径：/bin/chown<br>执行权限：所有用户<br>功能描述：修改文件的属主或属组<br>chown 用户名 文件名      改变文件属主<br>chown user1 aa         user1必须存在<br>chown user1:user1 aa   改变属主同时改变属组<br><strong>➤用户操作</strong><br>useradd 用户名        功能描述：添加用户<br>passwd 用户名         功能描述：设定用户密码   </p>
+<h3 id="六、帮助命令"><a href="#六、帮助命令" class="headerlink" title="六、帮助命令"></a>六、帮助命令</h3><p><strong>➤man</strong><br>命令名：man<br>命令英文原意：manual<br>命令所在路径：/usr/bin/man<br>执行权限：所有用户<br>功能描述：查看命令的帮助</p>
+<p><strong>➤–help</strong><br>命令名：–help<br>执行权限：所有用户<br>功能描述：查看命令的帮助</p>
+<h3 id="七、查找命令"><a href="#七、查找命令" class="headerlink" title="七、查找命令"></a>七、查找命令</h3><p><strong>➤whereis</strong><br>命令名：whereis<br>命令名称：whereis<br>命令所在路径：/usr/bin/whereis<br>执行权限：所有用户<br>功能描述：查找命令的命令，同时看到帮助文档位置</p>
+<p><strong>➤find</strong><br>命令名称：find<br>命令所在路径：/usr/bin/find<br>执行权限：所有用户<br>功能描述：搜索命令<br>find 查找位置 -name 文件名<br>find / -name aabbcc    查找/目录下名为 aabbcc的文件</p>
+<p>更多选项：<br>    -name 文件名      按照文件名查找<br>    -user 用户名      按照属主用户名查找文件<br>    -group 组名       按照属组组名查找文件<br>    -nouser          找没有属主的文件 (除了这三个文件：/proc、/sys、/mnt/cdrom)<br>    -size            按照文件大小k M  如：find / -size +50k<br>    -type            按照文件类型查找(f=普通  d=目录  l=链接)<br>    -perm            按照权限查找  如：find /root -perm 644<br>    -iname           按照文件名查找，不区分大小写</p>
+<p><strong>➤grep</strong><br>命令名称：grep<br>命令所在路径：/bin/grep<br>执行权限：所有用户<br>功能描述：查找符合条件的字串<br>grep 选项 ‘字串’ 查找路径<br>grep -i “root” /etc/passwd<br>    -v       反向选择<br>    -i       忽略大小写<br>管道符 |<br>命令1 | 命令2                 命令1的执行结果，作为命令2的执行条件<br>cat 文件名 | grep ‘字串’      提取含有字符串的行<br>ls -l /etc | more           分屏显示ls内容</p>
+<h3 id="八、压缩和解压缩"><a href="#八、压缩和解压缩" class="headerlink" title="八、压缩和解压缩"></a>八、压缩和解压缩</h3><p><strong>➤linux可以识别的常见压缩格式</strong>：.gz .bz2 </p>
+<p><strong>➤常见的压缩和打包命令</strong>：.tar.gz .tar.bz2</p>
+<p><strong>➤压缩/解压 同时打包</strong><br>tar -zcvf 压缩文件名 源文件<br>tar -zcvf aa.tar.gz aa<br>    -z       识别.gz格式<br>    -c       压缩<br>    -v       显示压缩过程<br>    -f       指定压缩包名<br>tar  -zxvf  压缩文件名   解压缩同时解打包<br>tar -jcvf 压缩文件名 源文件      压缩同时打包<br>tar -jcvf aa.tar.bz2 aa<br>tar -jxvf aa.tar.bz2          解打包同时解压缩</p>
+<p>查看不解包<br>tar -ztvf aa.tar.gz           查看不解压<br>tar -jtvf aa.tar.bz2<br>    -t  只查看，不解压<br>tar -jxvf root.tar.bz2 -C /tmp/      指定解压缩位置</p>
+<h3 id="九、关机和重启命令"><a href="#九、关机和重启命令" class="headerlink" title="九、关机和重启命令"></a>九、关机和重启命令</h3><p><strong>➤shutdown</strong><br>命令名称：shutdown<br>命令所在路径：/sbin/shutdown<br>执行权限：root<br>功能描述：关机/重启<br>shutdown -h now    没有特殊情况，使用此命令<br>    -h    关机<br>    -r    重启</p>
+<p><strong>➤reboot</strong><br>命令名称：reboot<br>命令所在路径：/sbin/reboot<br>执行权限：root<br>功能描述：关机/重启挂载<br>挂载命令</p>
+<p><strong>➤mount</strong><br>命令名称：mount<br>命令所在路径：/bin/mount<br>执行权限：所有用户<br>功能描述：挂载<br>linux所有存储设备都必须挂载使用，包括硬盘</p>
+<p><strong>➤光盘挂载</strong><br>    /dev/sda1      第一个scsi硬盘的第一分区<br>    /dev/cdrom     光盘<br>    /dev/hdc       IDE硬盘   centos 5.5<br>    /dev/sr0       光盘      centos 6.x<br>    mount -t 文件系统 设备描述文件 挂载点（已经存在空目录）<br>    mount -t iso9660 /dev/cdrom /mnt/cdrom<br><strong>➤光盘卸载</strong><br>    umount /dev/cdrom<br>    umount /mnt/cdrom      注意：退出挂载目录，才能卸载<br>    fdisk -l 查看设备名<br>    mount -t vfat /dev/sdb1 /mnt/usb</p>
+<h3 id="十、网络命令"><a href="#十、网络命令" class="headerlink" title="十、网络命令"></a>十、网络命令</h3><p><strong>➤ping</strong><br>命令名称：ping<br>命令所在路径：/bin/ping<br>执行权限：所有用户<br>功能描述：测试网络畅通性<br>ping -c 次数 ip    探测网络通畅</p>
+<p><strong>➤ifconfig</strong><br>命令名称：ifconfig<br>命令英文原意：interface configure<br>命令所在路径：/sbin/ifconfig<br>执行权限：root<br>功能描述：查询本机网络信息</p>
 
       
 
@@ -361,7 +253,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -417,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/12/16%20%E4%B8%AA%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84%20Java%20%E5%B7%A5%E5%85%B7%E7%B1%BB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/25/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -431,18 +323,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/20/100%E5%A4%9A%E4%B8%AA%E5%85%8D%E8%B4%B9API%E6%8E%A5%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          100多个免费API接口
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/11/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-Git-%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">工作中 99% 能用到的 Git 命令</div>
+    <a href="/2020/04/23/6%E6%AC%BEVue%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E6%A1%86%E6%9E%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">6款Vue管理后台框架</div>
       <i class="icon-circle-right"></i>
     </a>
   
