@@ -74,6 +74,9 @@
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
+			总文章数 7
+		</nav>
+		<nav class="header-smart-menu">
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
@@ -443,13 +446,18 @@
         </div>
       </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2020 Qiu Xiaojia
-    	</div>
-    </div>
-  </div>
+  
+  
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+        </span>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
 </footer>
     </div>
     <script>
@@ -478,6 +486,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </script>
 <script type="text/javascript" src="/./click.js">
 </script>
+
+
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
