@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SpringBoot 优雅的配置拦截器方式 | 丘小家的博客</title>
+  <title>axios | 丘小家的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="拦截器intercprot 和 过滤器 Filter 其实作用类似，在最开始接触java 使用struts2的时候，里面都是filter，后来springmvc时就用interceptor，没太在意过区别，反正就是起检查作用的，最重要的要记住他们的执行顺序： 先filter 后 interceptor，过滤前-拦截前-action执行-拦截后-过滤后。 其实spring boot拦截器的配置方式和">
+  <meta name="description" content="axios 官网：https:&#x2F;&#x2F;github.com&#x2F;axios&#x2F;axios  作用：发送网络请求并处理网络响应。  使用：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot 优雅的配置拦截器方式">
-<meta property="og:url" content="http://yoursite.com/2020/04/22/SpringBoot-%E4%BC%98%E9%9B%85%E7%9A%84%E9%85%8D%E7%BD%AE%E6%8B%A6%E6%88%AA%E5%99%A8%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:title" content="axios">
+<meta property="og:url" content="http://yoursite.com/2020/06/26/axios/index.html">
 <meta property="og:site_name" content="丘小家的博客">
-<meta property="og:description" content="拦截器intercprot 和 过滤器 Filter 其实作用类似，在最开始接触java 使用struts2的时候，里面都是filter，后来springmvc时就用interceptor，没太在意过区别，反正就是起检查作用的，最重要的要记住他们的执行顺序： 先filter 后 interceptor，过滤前-拦截前-action执行-拦截后-过滤后。 其实spring boot拦截器的配置方式和">
+<meta property="og:description" content="axios 官网：https:&#x2F;&#x2F;github.com&#x2F;axios&#x2F;axios  作用：发送网络请求并处理网络响应。  使用：">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-22T05:40:50.000Z">
-<meta property="article:modified_time" content="2020-04-20T05:53:42.439Z">
+<meta property="article:published_time" content="2020-06-26T09:16:30.000Z">
+<meta property="article:modified_time" content="2020-06-25T07:45:06.736Z">
 <meta property="article:author" content="丘小家">
-<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="丘小家的博客" type="application/atom+xml">
@@ -250,20 +250,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SpringBoot-优雅的配置拦截器方式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-axios" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SpringBoot 优雅的配置拦截器方式
+      axios
     </h1>
   
 
         
-        <a href="/2020/04/22/SpringBoot-%E4%BC%98%E9%9B%85%E7%9A%84%E9%85%8D%E7%BD%AE%E6%8B%A6%E6%88%AA%E5%99%A8%E6%96%B9%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-04-22T05:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
+        <a href="/2020/06/26/axios/" class="archive-article-date">
+  	<time datetime="2020-06-26T09:16:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-26</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -273,7 +273,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.1k字</span>
+        <span class="post-count">370字</span>
       </span>
     </span>
 
@@ -282,7 +282,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -294,30 +294,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>拦截器intercprot 和 过滤器 Filter 其实作用类似，在最开始接触java 使用struts2的时候，里面都是filter，后来springmvc时就用interceptor，没太在意过区别，反正就是起检查作用的，最重要的要记住他们的执行顺序： 先filter 后 interceptor，过滤前-拦截前-action执行-拦截后-过滤后。</p>
-<p>其实spring boot拦截器的配置方式和springMVC差不多，只有一些小的改变需要注意下就ok了。</p>
-<p>下面主要介绍两种常用的拦截器：</p>
+        <h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><ul>
+<li><p>官网：<a href="https://github.com/axios/axios" target="_blank" rel="noopener">https://github.com/axios/axios</a></p>
+</li>
+<li><p>作用：发送网络请求并处理网络响应。</p>
+</li>
+<li><p>使用：</p>
 <a id="more"></a>
 
-<h2 id="一、基于URL实现的拦截器："><a href="#一、基于URL实现的拦截器：" class="headerlink" title="一、基于URL实现的拦截器："></a><strong>一、基于URL实现的拦截器：</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class LoginInterceptor extends HandlerInterceptorAdapter&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 在请求处理之前进行调用（Controller方法调用之前）</span><br><span class="line">     * 基于URL实现的拦截器</span><br><span class="line">     * @param request</span><br><span class="line">     * @param response</span><br><span class="line">     * @param handler</span><br><span class="line">     * @return</span><br><span class="line">     * @throws Exception</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception &#123;</span><br><span class="line">        String path &#x3D; request.getServletPath();</span><br><span class="line">        if (path.matches(Const.NO_INTERCEPTOR_PATH)) &#123;</span><br><span class="line">            &#x2F;&#x2F;不需要的拦截直接过</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            &#x2F;&#x2F; 这写你拦截需要干的事儿，比如取缓存，SESSION，权限判断等</span><br><span class="line">            System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>使用axios.request()发起一个网络请求。</li>
+<li>then()网络请求成功。</li>
+<li>catch()网络请求失败。</li>
+</ol>
+</li>
+</ul>
+<p>1.安装axios</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
 
-<p>关键代码：path.matches(Const.NO_INTERCEPTOR_PATH 就是基于正则匹配的url。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @author     BianP</span><br><span class="line"> * @explain 常量类</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Const &#123;</span><br><span class="line"></span><br><span class="line">    public static final String SUCCESS &#x3D; &quot;SUCCESS&quot;;</span><br><span class="line">    public static final String ERROR &#x3D; &quot;ERROR&quot;;</span><br><span class="line">    public static final String FIALL &#x3D; &quot;FIALL&quot;;</span><br><span class="line">    &#x2F;**********************对象和个体****************************&#x2F;</span><br><span class="line">    public static final String SESSION_USER &#x3D; &quot;loginedAgent&quot;; &#x2F;&#x2F; 用户对象</span><br><span class="line">    public static final String SESSION_LOGINID &#x3D; &quot;sessionLoginID&quot;; &#x2F;&#x2F; 登录ID</span><br><span class="line">    public static final String SESSION_USERID &#x3D; &quot;sessionUserID&quot;; &#x2F;&#x2F; 当前用户对象ID编号</span><br><span class="line"></span><br><span class="line">    public static final String SESSION_USERNAME &#x3D; &quot;sessionUserName&quot;; &#x2F;&#x2F; 当前用户对象ID编号</span><br><span class="line">    public static final Integer PAGE &#x3D; 10; &#x2F;&#x2F; 默认分页数</span><br><span class="line">    public static final String SESSION_URL &#x3D; &quot;sessionUrl&quot;; &#x2F;&#x2F; 被记录的url</span><br><span class="line">    public static final String SESSION_SECURITY_CODE &#x3D; &quot;sessionVerifyCode&quot;; &#x2F;&#x2F; 登录页验证码</span><br><span class="line">    &#x2F;&#x2F; 时间 缓存时间</span><br><span class="line">    public static final int TIMEOUT &#x3D; 1800;&#x2F;&#x2F; 秒</span><br><span class="line">    public static final String ON_LOGIN &#x3D; &quot;&#x2F;logout.htm&quot;;</span><br><span class="line">    public static final String LOGIN_OUT &#x3D; &quot;&#x2F;toLogout&quot;;</span><br><span class="line">    &#x2F;&#x2F; 不验证URL anon：不验证&#x2F;authc：受控制的</span><br><span class="line">    public static final String NO_INTERCEPTOR_PATH &#x3D;&quot;.*&#x2F;((.css)|(.js)|(images)|(login)|(anon)).*&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;home&quot;&gt;</span><br><span class="line">   </span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import axios from &#39;axios&#39;;</span><br><span class="line"></span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &#39;App&#39;,</span><br><span class="line">    created() &#123;</span><br><span class="line">      axios.request(&#123;</span><br><span class="line">        method: &#39;get&#39;,</span><br><span class="line">        url: &#39;http:&#x2F;&#x2F;app.sencha.com.cn&#x2F;soya&#x2F;apps&#x2F;testdb&#x2F;server&#x2F;&#39;</span><br><span class="line">      &#125;).then((res &#x3D;&gt; &#123;</span><br><span class="line">        console.log(res);</span><br><span class="line">      &#125;)).catch(err &#x3D;&gt; &#123;</span><br><span class="line">        console.log(err);</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、基于注解的拦截器"><a href="#二、基于注解的拦截器" class="headerlink" title="二、基于注解的拦截器"></a><strong>二、基于注解的拦截器</strong></h2><p>①创建注解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 在需要登录验证的Controller的方法上使用此注解</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Target(&#123;ElementType.METHOD&#125;)&#x2F;&#x2F; 可用在方法名上</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)&#x2F;&#x2F; 运行时有效</span><br><span class="line">public @interface LoginRequired &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>②创建拦截器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class AuthorityInterceptor extends HandlerInterceptorAdapter&#123;</span><br><span class="line"></span><br><span class="line">     @Override</span><br><span class="line">     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception &#123;</span><br><span class="line">        &#x2F;&#x2F; 如果不是映射到方法直接通过</span><br><span class="line">        if (!(handler instanceof HandlerMethod)) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; ①:START 方法注解级拦截器</span><br><span class="line">        HandlerMethod handlerMethod &#x3D; (HandlerMethod) handler;</span><br><span class="line">        Method method &#x3D; handlerMethod.getMethod();</span><br><span class="line">        &#x2F;&#x2F; 判断接口是否需要登录</span><br><span class="line">        LoginRequired methodAnnotation &#x3D; method.getAnnotation(LoginRequired.class);</span><br><span class="line">        &#x2F;&#x2F; 有 @LoginRequired 注解，需要认证</span><br><span class="line">        if (methodAnnotation !&#x3D; null) &#123;</span><br><span class="line">            &#x2F;&#x2F; 这写你拦截需要干的事儿，比如取缓存，SESSION，权限判断等</span><br><span class="line">            System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="三、把拦截器添加到配置中，相当于SpringMVC时的配置文件干的事儿："><a href="#三、把拦截器添加到配置中，相当于SpringMVC时的配置文件干的事儿：" class="headerlink" title="三、把拦截器添加到配置中，相当于SpringMVC时的配置文件干的事儿："></a><strong>三、把拦截器添加到配置中，相当于SpringMVC时的配置文件干的事儿：</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 和springmvc的webmvc拦截配置一样</span><br><span class="line"> * @author BIANP</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Configuration</span><br><span class="line">public class WebConfigurer implements WebMvcConfigurer &#123;</span><br><span class="line">     @Override</span><br><span class="line">     public void addInterceptors(InterceptorRegistry registry) &#123;</span><br><span class="line">        &#x2F;&#x2F; 拦截所有请求，通过判断是否有 @LoginRequired 注解 决定是否需要登录</span><br><span class="line">        registry.addInterceptor(LoginInterceptor()).addPathPatterns(&quot;&#x2F;**&quot;);</span><br><span class="line">        registry.addInterceptor(AuthorityInterceptor()).addPathPatterns(&quot;&#x2F;**&quot;);</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     @Bean</span><br><span class="line">     public LoginInterceptor LoginInterceptor() &#123;</span><br><span class="line">         return new LoginInterceptor();</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     @Bean</span><br><span class="line">     public AuthorityInterceptor AuthorityInterceptor() &#123;</span><br><span class="line">         return new AuthorityInterceptor();</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>axios与mockjs的结合使用</strong></p>
+<blockquote>
+<p>使用 axios.request() 发起一个网络请求，如果 url 访问失败，则使用 Mockjs 随机生成数据。</p>
+<p>Mock.js(rurl,template)</p>
+<p>当拦截到匹配 rurl 的 Ajax 请求时，将根据数据模板 template 生成模拟数据，并作为响应数据返回。</p>
+</blockquote>
+</li>
+</ul>
+<p>1.安装 axios 和 mockjs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br><span class="line">npm install mockjs</span><br></pre></td></tr></table></figure>
 
-<p>1、一定要加@Configuration 这个注解，在启动的时候在会被加载。</p>
-<p>2、有一些教程是用的“WebMvcConfigurerAdapter”，不过在spring5.0版本后这个类被丢弃了 WebMvcConfigurerAdapter ，虽然还可以用，但是看起来不好。</p>
-<p>3、也有一些教程使用的WebMvcConfigurationSupport，我使用后发现，<code>classpath:/META/resources/，classpath:/resources/，classpath:/static/，classpath:/public/</code>不生效。具体可以原因，大家可以看下源码因为：WebMvcAutoConfiguration上有个条件注解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)</span><br></pre></td></tr></table></figure>
+<p>2.使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;home&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    import axios from &#39;axios&#39;;</span><br><span class="line">    import Mock from &#39;mockjs&#39;;</span><br><span class="line"></span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &#39;App&#39;,</span><br><span class="line">        created() &#123;</span><br><span class="line">            axios.request(&#123;</span><br><span class="line">                method: &#39;get&#39;,</span><br><span class="line">                url: &#39;http:&#x2F;&#x2F;app.sencha.com.cn&#x2F;soya&#x2F;apps&#x2F;testdb&#x2F;server&#x2F;123&#39;</span><br><span class="line">            &#125;).then((res &#x3D;&gt; &#123;</span><br><span class="line">                console.log(res);</span><br><span class="line">            &#125;)).catch(err &#x3D;&gt; &#123;</span><br><span class="line">                console.log(err);</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">            Mock.mock(&#39;http:&#x2F;&#x2F;app.sencha.com.cn&#x2F;soya&#x2F;apps&#x2F;testdb&#x2F;server&#x2F;123&#39;, &#123;</span><br><span class="line">                &#39;list|3-5&#39;: [&#123;</span><br><span class="line">                    &#39;id|+1&#39;: 1</span><br><span class="line">                &#125;]</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
-<p>所以还是建议使用WebMvcConfigurer， 其实springMVC很多东西，都可以搬到springboot中来使用，只需要把配置文件的模式，改成 对应@Configuration 类就好了。</p>
+
+
+
+
+
+
+
+
+<p>​            </p>
 
       
 
@@ -352,7 +375,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -408,7 +431,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/22/SpringBoot-%E4%BC%98%E9%9B%85%E7%9A%84%E9%85%8D%E7%BD%AE%E6%8B%A6%E6%88%AA%E5%99%A8%E6%96%B9%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/26/axios/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -422,18 +445,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/23/6%E6%AC%BEVue%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E6%A1%86%E6%9E%B6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          6款Vue管理后台框架
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/20/100%E5%A4%9A%E4%B8%AA%E5%85%8D%E8%B4%B9API%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">100多个免费API接口</div>
+    <a href="/2020/06/25/mockjs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mockjs</div>
       <i class="icon-circle-right"></i>
     </a>
   
