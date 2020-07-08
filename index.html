@@ -109,7 +109,7 @@
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-			总文章数 11
+			总文章数 12
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -247,6 +247,104 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+  
+    <article id="post-swagger2-注解整体说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/">swagger2 注解整体说明</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/" class="archive-article-date">
+  	<time datetime="2020-07-08T08:35:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin:10px 0px;font-size:14px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">921字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">3分</span>
+      </span>
+    </span>
+</div>
+          
+        <!-- 添加完成 -->
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@Api：用在请求的类上，表示对类的说明</span><br><span class="line">    tags=<span class="string">"说明该类的作用，可以在UI界面上看到的注解"</span></span><br><span class="line">    value=<span class="string">"该参数没什么意义，在UI界面上也看到，所以不需要配置"</span></span><br><span class="line"></span><br><span class="line">@ApiOperation：用在请求的方法上，说明方法的用途、作用</span><br><span class="line">    value=<span class="string">"说明方法的用途、作用"</span></span><br><span class="line">    notes=<span class="string">"方法的备注说明"</span></span><br><span class="line"></span><br><span class="line">@ApiImplicitParams：用在请求的方法上，表示一组参数说明</span><br><span class="line">    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面</span><br><span class="line">        name：参数名</span><br><span class="line">        value：参数的汉字说明、解释</span><br><span class="line">        required：参数是否必须传</span><br><span class="line">        paramType：参数放在哪个地方</span><br><span class="line">            · header --&gt; 请求参数的获取：@RequestHeader</span><br><span class="line">            · query --&gt; 请求参数的获取：@RequestParam</span><br><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable</span><br><span class="line">            · body（不常用）</span><br><span class="line">            · form（不常用）    </span><br><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span><br><span class="line">        defaultValue：参数的默认值</span><br><span class="line"></span><br><span class="line">@ApiResponses：用在请求的方法上，表示一组响应</span><br><span class="line">    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息</span><br><span class="line">        code：数字，例如400</span><br><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span><br><span class="line">        response：抛出异常的类</span><br><span class="line"></span><br><span class="line">@ApiModel：用于响应类上，表示一个返回响应数据的信息</span><br><span class="line">            （这种一般用在post创建的时候，使用@RequestBody这样的场景，</span><br><span class="line">            请求参数无法使用@ApiImplicitParam注解进行描述的时候）</span><br><span class="line">    @ApiModelProperty：用在属性上，描述响应类的属性</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">swagger</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
 
   
     <article id="post-axios" class="article article-type-post  article-index" itemscope itemprop="blogPost">
@@ -1171,118 +1269,6 @@
 
 
   
-    <article id="post-工作中-99-能用到的-Git-命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/11/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-Git-%E5%91%BD%E4%BB%A4/">工作中 99% 能用到的 Git 命令</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/11/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-Git-%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-04-11T02:16:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin:10px 0px;font-size:14px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">710字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
-      </span>
-    </span>
-</div>
-          
-        <!-- 添加完成 -->
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h1><ol>
-<li>git branch 创建分支</li>
-<li>git branch -b 创建并切换到新建的分支上</li>
-<li>git checkout 切换分支</li>
-<li>git branch 查看分支列表</li>
-<li>git branch -v 查看所有分支的最后一次操作</li>
-<li>git branch -vv 查看当前分支</li>
-<li>git brabch -b 分支名 origin/分支名 创建远程分支到本地</li>
-<li>git branch –merged 查看别的分支和当前分支合并过的分支</li>
-<li>git branch –no-merged 查看未与当前分支合并的分支</li>
-<li>git branch -d 分支名 删除本地分支</li>
-<li>git branch -D 分支名 强行删除分支</li>
-<li>git branch origin :分支名 删除远处仓库分支</li>
-<li>git merge 分支名 合并分支到当前分支上</li>
-</ol>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/11/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-Git-%E5%91%BD%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
@@ -1460,6 +1446,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">swagger</a>
               </li>
             
             <div class="clearfix"></div>
