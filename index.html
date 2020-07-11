@@ -293,17 +293,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Springboot中-事务的注解如下"><a href="#Springboot中-事务的注解如下" class="headerlink" title="Springboot中,事务的注解如下:"></a>Springboot中,事务的注解如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br></pre></td></tr></table></figure>
+        <h2 id="Springboot中-事务的注解如下"><a href="#Springboot中-事务的注解如下" class="headerlink" title="Springboot中,事务的注解如下:"></a>Springboot中,事务的注解如下:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br></pre></td></tr></table></figure>
 
 <p>其中,<strong>Propagation</strong>有7个常量值,常用的有REQUIRED和SUPPORTS,下面是各种值的解释:</p>
 <p><strong>PROPAGATION_REQUIRED</strong>:如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。</p>
 <p><strong>PROPAGATION_SUPPORTS</strong>:支持当前事务，如果当前没有事务，就以非事务方式执行。</p>
 <p><strong>PROPAGATION_MANDATORY</strong>:使用当前的事务，如果当前没有事务，就抛出异常。</p>
-<p><strong>PROPAGATION_REQUIRES_NEW</strong>:新建事务，如果当前存在事务，把当前事务挂起。</p>
-<p><strong>PROPAGATION_NOT_SUPPORTED</strong>:以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</p>
-<p><strong>PROPAGATION_NEVER</strong>:以非事务方式执行，如果当前存在事务，则抛出异常。</p>
-<p><strong>PROPAGATION_NESTED</strong>:如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与PROPAGATION_REQUIRED类似的操作。</p>
-
+        
       
 
       
