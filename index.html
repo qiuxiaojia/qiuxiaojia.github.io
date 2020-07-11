@@ -109,7 +109,7 @@
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
-			总文章数 12
+			总文章数 13
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -247,6 +247,113 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+  
+    <article id="post-Springboot注解-Transactional" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/">Springboot注解@Transactional</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/" class="archive-article-date">
+  	<time datetime="2020-07-11T07:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin:10px 0px;font-size:14px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">230字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+        <!-- 添加完成 -->
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Springboot中-事务的注解如下"><a href="#Springboot中-事务的注解如下" class="headerlink" title="Springboot中,事务的注解如下:"></a>Springboot中,事务的注解如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br></pre></td></tr></table></figure>
+
+<p>其中,<strong>Propagation</strong>有7个常量值,常用的有REQUIRED和SUPPORTS,下面是各种值的解释:</p>
+<p><strong>PROPAGATION_REQUIRED</strong>:如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。</p>
+<p><strong>PROPAGATION_SUPPORTS</strong>:支持当前事务，如果当前没有事务，就以非事务方式执行。</p>
+<p><strong>PROPAGATION_MANDATORY</strong>:使用当前的事务，如果当前没有事务，就抛出异常。</p>
+<p><strong>PROPAGATION_REQUIRES_NEW</strong>:新建事务，如果当前存在事务，把当前事务挂起。</p>
+<p><strong>PROPAGATION_NOT_SUPPORTED</strong>:以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</p>
+<p><strong>PROPAGATION_NEVER</strong>:以非事务方式执行，如果当前存在事务，则抛出异常。</p>
+<p><strong>PROPAGATION_NESTED</strong>:如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与PROPAGATION_REQUIRED类似的操作。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
 
   
     <article id="post-swagger2-注解整体说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
@@ -1132,114 +1239,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/04/20/100%E5%A4%9A%E4%B8%AA%E5%85%8D%E8%B4%B9API%E6%8E%A5%E5%8F%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-16 个超级实用的 Java 工具类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/12/16%20%E4%B8%AA%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84%20Java%20%E5%B7%A5%E5%85%B7%E7%B1%BB/">16 个超级实用的 Java 工具类</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/12/16%20%E4%B8%AA%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84%20Java%20%E5%B7%A5%E5%85%B7%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-04-12T02:28:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin:10px 0px;font-size:14px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.5k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
-      </span>
-    </span>
-</div>
-          
-        <!-- 添加完成 -->
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一-org-apache-commons-io-IOUtils"><a href="#一-org-apache-commons-io-IOUtils" class="headerlink" title="一. org.apache.commons.io.IOUtils"></a>一. org.apache.commons.io.IOUtils</h3><ul>
-<li>closeQuietly：关闭一个IO流、socket、或者selector且不抛出异常，通常放在finally块</li>
-<li>toString：转换IO流、 Uri、 byte[]为String</li>
-<li>copy：IO流数据复制，从输入流写到输出流中，最大支持2GB</li>
-<li>toByteArray：从输入流、URI获取byte[]</li>
-<li>write：把字节. 字符等写入输出流</li>
-<li>toInputStream：把字符转换为输入流</li>
-<li>readLines：从输入流中读取多行数据，返回List<String></li>
-<li>copyLarge：同copy，支持2GB以上数据的复制</li>
-<li>lineIterator：从输入流返回一个迭代器，根据参数要求读取的数据量，全部读取，如果数据不够，则失败</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/12/16%20%E4%B8%AA%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84%20Java%20%E5%B7%A5%E5%85%B7%E7%B1%BB/">展开全文 >></a>
         </p>
       
 

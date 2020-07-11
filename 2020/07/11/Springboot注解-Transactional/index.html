@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>swagger2 注解整体说明 | 丘小家的博客</title>
+  <title>Springboot注解@Transactional | 丘小家的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1234567891011121314151617181920212223242526272829303132@Api：用在请求的类上，表示对类的说明    tags&#x3D;&quot;说明该类的作用，可以在UI界面上看到的注解&quot;    value&#x3D;&quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&quot;@ApiOperation：用在请求的方法上，说明方法的用途、作用    value&#x3D;&quot;说明方法的用途、作用&quot;">
+  <meta name="description" content="Springboot中,事务的注解如下:1@Transactional(propagation &#x3D; Propagation.REQUIRED)  其中,Propagation有7个常量值,常用的有REQUIRED和SUPPORTS,下面是各种值的解释: PROPAGATION_REQUIRED:如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。 PROP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swagger2 注解整体说明">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:title" content="Springboot注解@Transactional">
+<meta property="og:url" content="http://yoursite.com/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/index.html">
 <meta property="og:site_name" content="丘小家的博客">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132@Api：用在请求的类上，表示对类的说明    tags&#x3D;&quot;说明该类的作用，可以在UI界面上看到的注解&quot;    value&#x3D;&quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&quot;@ApiOperation：用在请求的方法上，说明方法的用途、作用    value&#x3D;&quot;说明方法的用途、作用&quot;">
+<meta property="og:description" content="Springboot中,事务的注解如下:1@Transactional(propagation &#x3D; Propagation.REQUIRED)  其中,Propagation有7个常量值,常用的有REQUIRED和SUPPORTS,下面是各种值的解释: PROPAGATION_REQUIRED:如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。 PROP">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-08T08:35:17.000Z">
-<meta property="article:modified_time" content="2020-07-08T08:44:39.008Z">
+<meta property="article:published_time" content="2020-07-11T07:45:54.000Z">
+<meta property="article:modified_time" content="2020-07-11T07:47:08.792Z">
 <meta property="article:author" content="丘小家">
-<meta property="article:tag" content="swagger">
+<meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="丘小家的博客" type="application/atom+xml">
@@ -251,20 +251,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-swagger2-注解整体说明" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Springboot注解-Transactional" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      swagger2 注解整体说明
+      Springboot注解@Transactional
     </h1>
   
 
         
-        <a href="/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/" class="archive-article-date">
-  	<time datetime="2020-07-08T08:35:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+        <a href="/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/" class="archive-article-date">
+  	<time datetime="2020-07-11T07:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -274,7 +274,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">921字</span>
+        <span class="post-count">230字</span>
       </span>
     </span>
 
@@ -283,7 +283,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -295,50 +295,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@Api：用在请求的类上，表示对类的说明</span><br><span class="line">    tags=<span class="string">"说明该类的作用，可以在UI界面上看到的注解"</span></span><br><span class="line">    value=<span class="string">"该参数没什么意义，在UI界面上也看到，所以不需要配置"</span></span><br><span class="line"></span><br><span class="line">@ApiOperation：用在请求的方法上，说明方法的用途、作用</span><br><span class="line">    value=<span class="string">"说明方法的用途、作用"</span></span><br><span class="line">    notes=<span class="string">"方法的备注说明"</span></span><br><span class="line"></span><br><span class="line">@ApiImplicitParams：用在请求的方法上，表示一组参数说明</span><br><span class="line">    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面</span><br><span class="line">        name：参数名</span><br><span class="line">        value：参数的汉字说明、解释</span><br><span class="line">        required：参数是否必须传</span><br><span class="line">        paramType：参数放在哪个地方</span><br><span class="line">            · header --&gt; 请求参数的获取：@RequestHeader</span><br><span class="line">            · query --&gt; 请求参数的获取：@RequestParam</span><br><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable</span><br><span class="line">            · body（不常用）</span><br><span class="line">            · form（不常用）    </span><br><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span><br><span class="line">        defaultValue：参数的默认值</span><br><span class="line"></span><br><span class="line">@ApiResponses：用在请求的方法上，表示一组响应</span><br><span class="line">    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息</span><br><span class="line">        code：数字，例如400</span><br><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span><br><span class="line">        response：抛出异常的类</span><br><span class="line"></span><br><span class="line">@ApiModel：用于响应类上，表示一个返回响应数据的信息</span><br><span class="line">            （这种一般用在post创建的时候，使用@RequestBody这样的场景，</span><br><span class="line">            请求参数无法使用@ApiImplicitParam注解进行描述的时候）</span><br><span class="line">    @ApiModelProperty：用在属性上，描述响应类的属性</span><br></pre></td></tr></table></figure>
+        <h4 id="Springboot中-事务的注解如下"><a href="#Springboot中-事务的注解如下" class="headerlink" title="Springboot中,事务的注解如下:"></a>Springboot中,事务的注解如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
-
-<h2 id="1、-Api：用在请求的类上，说明该类的作用"><a href="#1、-Api：用在请求的类上，说明该类的作用" class="headerlink" title="1、 @Api：用在请求的类上，说明该类的作用"></a>1、 @Api：用在请求的类上，说明该类的作用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@Api：用在请求的类上，说明该类的作用</span><br><span class="line">    tags=<span class="string">"说明该类的作用"</span></span><br><span class="line">    value=<span class="string">"该参数没什么意义，所以不需要配置"</span></span><br></pre></td></tr></table></figure>
-
-<p>示例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Api(tags=<span class="string">"APP用户注册Controller"</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、-ApiOperation：用在请求的方法上，说明方法的作用"><a href="#2、-ApiOperation：用在请求的方法上，说明方法的作用" class="headerlink" title="2、 @ApiOperation：用在请求的方法上，说明方法的作用"></a>2、 @ApiOperation：用在请求的方法上，说明方法的作用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation：<span class="string">"用在请求的方法上，说明方法的作用"</span></span><br><span class="line">    value=<span class="string">"说明方法的作用"</span></span><br><span class="line">    notes=<span class="string">"方法的备注说明"</span></span><br></pre></td></tr></table></figure>
-
-<p>示例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(value=<span class="string">"用户注册"</span>,notes=<span class="string">"手机号、密码都是必输项，年龄随边填，但必须是数字"</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3、-ApiImplicitParams：用在请求的方法上，包含一组参数说明"><a href="#3、-ApiImplicitParams：用在请求的方法上，包含一组参数说明" class="headerlink" title="3、@ApiImplicitParams：用在请求的方法上，包含一组参数说明"></a>3、@ApiImplicitParams：用在请求的方法上，包含一组参数说明</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@ApiImplicitParams：用在请求的方法上，包含一组参数说明</span><br><span class="line">    @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       </span><br><span class="line">        name：参数名</span><br><span class="line">        value：参数的汉字说明、解释</span><br><span class="line">        required：参数是否必须传</span><br><span class="line">        paramType：参数放在哪个地方</span><br><span class="line">            · header --&gt; 请求参数的获取：@RequestHeader</span><br><span class="line">            · query --&gt; 请求参数的获取：@RequestParam</span><br><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable</span><br><span class="line">            · body（不常用）</span><br><span class="line">            · form（不常用）    </span><br><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span><br><span class="line">        defaultValue：参数的默认值</span><br></pre></td></tr></table></figure>
-
-<p>示例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ApiImplicitParams(&#123;</span><br><span class="line">    @ApiImplicitParam(name=<span class="string">"mobile"</span>,value=<span class="string">"手机号"</span>,required=<span class="literal">true</span>,paramType=<span class="string">"form"</span>),</span><br><span class="line">    @ApiImplicitParam(name=<span class="string">"password"</span>,value=<span class="string">"密码"</span>,required=<span class="literal">true</span>,paramType=<span class="string">"form"</span>),</span><br><span class="line">    @ApiImplicitParam(name=<span class="string">"age"</span>,value=<span class="string">"年龄"</span>,required=<span class="literal">true</span>,paramType=<span class="string">"form"</span>,dataType=<span class="string">"Integer"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4、-ApiResponses：用于请求的方法上，表示一组响应"><a href="#4、-ApiResponses：用于请求的方法上，表示一组响应" class="headerlink" title="4、@ApiResponses：用于请求的方法上，表示一组响应"></a>4、@ApiResponses：用于请求的方法上，表示一组响应</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ApiResponses：用于请求的方法上，表示一组响应</span><br><span class="line">    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息</span><br><span class="line">        code：数字，例如400</span><br><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span><br><span class="line">        response：抛出异常的类</span><br></pre></td></tr></table></figure>
-
-<p>示例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ApiOperation(value = <span class="string">"select1请求"</span>,notes = <span class="string">"多个参数，多种的查询参数类型"</span>)</span><br><span class="line">@ApiResponses(&#123;</span><br><span class="line">    @ApiResponse(code=400,message=<span class="string">"请求参数没填好"</span>),</span><br><span class="line">    @ApiResponse(code=404,message=<span class="string">"请求路径没有或页面跳转路径不对"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5、-ApiModel：用于响应类上，表示一个返回响应数据的信息"><a href="#5、-ApiModel：用于响应类上，表示一个返回响应数据的信息" class="headerlink" title="5、 @ApiModel：用于响应类上，表示一个返回响应数据的信息"></a>5、 @ApiModel：用于响应类上，表示一个返回响应数据的信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@ApiModel：用于响应类上，表示一个返回响应数据的信息</span><br><span class="line">            （这种一般用在post创建的时候，使用@RequestBody这样的场景，</span><br><span class="line">            请求参数无法使用@ApiImplicitParam注解进行描述的时候）</span><br><span class="line">    @ApiModelProperty：用在属性上，描述响应类的属性</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<p>​    </p>
-<p>​    </p>
-<p>​                      </p>
-<p>​               </p>
+<p>其中,<strong>Propagation</strong>有7个常量值,常用的有REQUIRED和SUPPORTS,下面是各种值的解释:</p>
+<p><strong>PROPAGATION_REQUIRED</strong>:如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。</p>
+<p><strong>PROPAGATION_SUPPORTS</strong>:支持当前事务，如果当前没有事务，就以非事务方式执行。</p>
+<p><strong>PROPAGATION_MANDATORY</strong>:使用当前的事务，如果当前没有事务，就抛出异常。</p>
+<p><strong>PROPAGATION_REQUIRES_NEW</strong>:新建事务，如果当前存在事务，把当前事务挂起。</p>
+<p><strong>PROPAGATION_NOT_SUPPORTED</strong>:以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</p>
+<p><strong>PROPAGATION_NEVER</strong>:以非事务方式执行，如果当前存在事务，则抛出异常。</p>
+<p><strong>PROPAGATION_NESTED</strong>:如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与PROPAGATION_REQUIRED类似的操作。</p>
 
       
 
@@ -373,7 +339,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">swagger</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
       		
 		</ul>
@@ -429,7 +395,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -443,18 +409,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/11/Springboot%E6%B3%A8%E8%A7%A3-Transactional/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Springboot注解@Transactional
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/06/26/axios/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">axios</div>
+    <a href="/2020/07/08/swagger2-%E6%B3%A8%E8%A7%A3%E6%95%B4%E4%BD%93%E8%AF%B4%E6%98%8E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">swagger2 注解整体说明</div>
       <i class="icon-circle-right"></i>
     </a>
   
